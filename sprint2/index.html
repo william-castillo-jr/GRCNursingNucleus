@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset ="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Clinical Requirements</title>
+    <link rel="icon" href="/images/Nursing.ico" type="image/x-con">
+    
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/sprint2/test/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
+    <style>
+
+        nav {
+            box-shadow: 0 3px 6px;
+        }
+        body {
+            background-color: #106333;
+        }
+        .arrow-icon {
+            margin-left: 10px;
+            transition: transform 0.2s;
+        }
+        span.first  {
+            display: inline-block;
+            float: left;
+            padding: 5%;
+            width: 40%;
+            border: 5px solid black;
+        }
+        span.second  {
+            display: inline-block;
+            float: left;
+            text-align: center;
+            padding: 5%;
+
+        }
+        span.third  {
+            display: inline-block;
+            float: left;
+            padding: 5%;
+            width: 40%;
+            border: 5px solid black;
+        }
+
+        .collapsible {
+            /*<!--background-color: #6AB445;-->*/
+            color: white;
+            padding: 20px;
+            width: 100%;
+            text-align: left;
+            font-size: 15px;
+        }
+
+        .content {
+            padding: 20px;
+            display: none;
+            overflow: hidden;
+            background-color: #f1f1f1;
+        }
+
+        body {
+            background-color: white;
+        }
+        card{
+            padding: 50px 30px 50px 80px;
+        }
+
+    </style>
+</head>
+<body data-bs-theme="light">
+<nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <a class="navbar-brand" href="http://chipmunks.greenriverdev.com/">
+        <img src="/images/Nursing.png" class="nav-item" style="margin-left: 12px" width=50px height=50px>
+    </a>
+    <a class="navbar-brand" href="/index.html"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link mx-5" href="/sprint2/index.html" role="button">Requirements</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link mx-5" href="/sprint2/questionnaire.html" role="button">Questionnaire</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link mx-5" href="/sprint2/contacts.html" role="button">Contact Us</a>
+            </li>
+        </ul>
+    </div>
+    <button onclick = "darkMode()" id="dark-mode-toggle" class="btn btn-dark"> Dark </button>
+</nav>
+
+<div class="container p-3 mb-5 rounded" style="background-color: white; margin-top: 20px; box-shadow: 0 19px 38px;">
+    <div class="card border-dark mb-3" style="background-color: white;">
+        <div class="card-header border-dark">
+            <h1 class="text-center">Green River College Nursing Program Clinical Requirements</h1>
+            <br>
+            <h4 class="text-center">2660*All vaccination proof must include full name, date of birth, and date of vaccine, titer (blood draw), or test</h4>
+        </div>
+        <!--buttons/items-->
+
+        <div class="container mt-5">
+            <div class="card border-dark">
+                <div class="card-header" data-bs-toggle="collapse" data-bs-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample1">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h5 class="text-center mb-0" style="flex: 1;">Tuberculosis Test - Expires Yearly</h5>
+                        <i class="fas fa-chevron-right arrow-icon"></i>
+                    </div>
+                </div>
+                <div class="row collapse" id="collapseExample1">
+                    <div class="col-sm-6 mb-3 mb-sm-0">
+                        <div class="card">
+                            <!--            <div class="text-center card-header" data-bs-toggle="collapse" data-bs-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample1">-->
+                            <div class="card-body p-2 g-col-6" style="padding: 50px 30px 50px 80px">
+                                <h5>2 Step</h5>
+                                <li class="card-text"> Must be two separate 2-step PPD tests done initially done approximately 2 weeks apart</li>
+                                <li class="card-text">Document must show duration in millimeter, data placed, and data read</li>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">QuantiFERON</h5>
+                                <li class="card-text"> Results must be negative</li>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container mt-5">
+            <div class="card border-dark">
+                <div class="card-header" data-bs-toggle="collapse" data-bs-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample2">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h5 class="text-center mb-0" style="flex: 1;">Hepatitis B Tier</h5>
+                        <i class="fas fa-chevron-right arrow-icon"></i>
+                    </div>
+                </div>
+                <div class="row collapse" id="collapseExample2">
+                    <div class="col-sm-6 mb-3 mb-sm-0">
+                        <div class="card">
+                            <!--            <div class="text-center card-header" data-bs-toggle="collapse" data-bs-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample1">-->
+                            <div class="card-body p-2 g-col-6" style="padding: 50px 30px 50px 80px">
+                                <h5>Titer</h5>
+                                <li class="card-text"> Only Anti-HBs or HepB SaB test are accepted</li>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Declination Form</h5>
+                                <li class="card-text">If currently in process of vaccine series or titer, or if non-converter</li>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container mt-5">
+            <div class="card border-dark">
+                <div class="card-header" data-bs-toggle="collapse" data-bs-target="#collapseExample3" aria-expanded="false" aria-controls="collapseExample3">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h5 class="text-center mb-0" style="flex: 1;">MMR Vaccine or Titer</h5>
+                        <i class="fas fa-chevron-right arrow-icon"></i>
+                    </div>
+                </div>
+                <div class="row collapse" id="collapseExample3">
+                    <div class="col-sm-6 mb-3 mb-sm-0">
+                        <div class="card">
+                            <!--            <div class="text-center card-header" data-bs-toggle="collapse" data-bs-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample1">-->
+                            <div class="card-body p-2 g-col-6" style="padding: 50px 30px 50px 80px">
+                                <h5>2 Documented Vaccine Dates</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Titer</h5>
+                                <li class="card-text">Separate titer needed for Measles, Mumps, and Rubella</li>
+                                <li class="card-text">If result is negative/low/equivocal must get booster dose</li>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container mt-5">
+            <div class="card border-dark">
+                <div class="card-header" data-bs-toggle="collapse" data-bs-target="#collapseExample4" aria-expanded="false" aria-controls="collapseExample3">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h5 class="text-center mb-0" style="flex: 1;">Varicella Vaccine or Titer - History of Chickenpox not accepted</h5>
+                        <i class="fas fa-chevron-right arrow-icon"></i>
+                    </div>
+                </div>
+                <div class="row collapse" id="collapseExample4">
+                    <div class="col-sm-6 mb-3 mb-sm-0">
+                        <div class="card">
+                            <div class="card-body p-2 g-col-6" style="padding: 50px 30px 50px 80px">
+                                <h5>2 documented vaccine dates</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title text-center">Titer</h5>
+                                <li class="card-text">If result is negative/low/equivocal must get booster dose</li>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mt-5">
+            <div class="card border-dark">
+                <div class="card-header" data-bs-toggle="collapse" data-bs-target="#collapseExample5" aria-expanded="false" aria-controls="collapseExample3">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h5 class="text-center mb-0" style="flex: 1;">Tdap Vaccine</h5>
+                        <i class="fas fa-chevron-right arrow-icon"></i>
+                    </div>
+                </div>
+                <div class="row collapse" id="collapseExample5">
+                    <div class="col-sm-6 mb-3 mb-sm-0">
+                        <div class="card">
+                            <!--            <div class="text-center card-header" data-bs-toggle="collapse" data-bs-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample1">-->
+                            <div class="card-body p-2 g-col-6" style="padding: 50px 30px 50px 80px">
+                                <h5>Vaccine must be for current season (Sept thru August)</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mt-5">
+            <div class="card border-dark">
+                <div class="card-header" data-bs-toggle="collapse" data-bs-target="#collapseExample6" aria-expanded="false" aria-controls="collapseExample3">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h5 class="text-center mb-0" style="flex: 1;">Covid 19 Vaccine Series</h5>
+                        <i class="fas fa-chevron-right arrow-icon"></i>
+                    </div>
+                </div>
+                <div class="row collapse" id="collapseExample6">
+                    <div class="col-sm-6 mb-3 mb-sm-0">
+                        <div class="card">
+                            <!--            <div class="text-center card-header" data-bs-toggle="collapse" data-bs-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample1">-->
+                            <div class="card-body p-2 g-col-6" style="padding: 50px 30px 50px 80px">
+                                <li>Proof must include manufacturer</li>
+                                <li>Pfizer, Moderna, and Janssen are the only ones we accept currently</li>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mt-5">
+            <div class="card border-dark">
+                <div class="card-header" data-bs-toggle="collapse" data-bs-target="#collapseExample7" aria-expanded="false" aria-controls="collapseExample3">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h5 class="text-center mb-0" style="flex: 1;">Covid Booster</h5>
+                        <i class="fas fa-chevron-right arrow-icon"></i>
+                    </div>
+                </div>
+                <div class="row collapse" id="collapseExample7">
+                    <div class="col-sm-6 mb-3 mb-sm-0">
+                        <div class="card">
+                            <!--            <div class="text-center card-header" data-bs-toggle="collapse" data-bs-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample1">-->
+                            <div class="card-body p-2 g-col-6" style="padding: 50px 30px 50px 80px">
+                                <li>Proof must include manufacturer</li>
+                                <li>Only one dose required currently, but may change in the future</li>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mt-5">
+            <div class="card border-dark">
+                <div class="card-header" data-bs-toggle="collapse" data-bs-target="#collapseExample8" aria-expanded="false" aria-controls="collapseExample3">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h5 class="text-center mb-0" style="flex: 1;">CPR Card</h5>
+                        <i class="fas fa-chevron-right arrow-icon"></i>
+                    </div>
+                </div>
+                <div class="row collapse" id="collapseExample8">
+                    <div class="col-sm-6 mb-3 mb-sm-0">
+                        <div class="card">
+                            <!--            <div class="text-center card-header" data-bs-toggle="collapse" data-bs-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample1">-->
+                            <div class="card-body p-2 g-col-6" style="padding: 50px 30px 50px 80px">
+                                <li>Must be American Heart Association Basic Life Support</li>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mt-5">
+            <div class="card border-dark">
+                <div class="card-header" data-bs-toggle="collapse" data-bs-target="#collapseExample9" aria-expanded="false" aria-controls="collapseExample3">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h5 class="text-center mb-0" style="flex: 1;">Professional Liability</h5>
+                        <i class="fas fa-chevron-right arrow-icon"></i>
+
+                    </div>
+                    <div class="row collapse" id="collapseExample9">
+                        <div class="col-sm-6 mb-3 mb-sm-0">
+                            <div class="card">
+                                <div class="card-body p-2 g-col-6" style="padding: 50px 30px 50px 80px">
+                                    <li>CANNOT attend lab or clinical prior to purchasing</li>
+                                    <li>Expires end of each school year (08/31)</li>
+                                    <li>Purchase at Cashier’s Office 253-833-9111 ext. 3399</li>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <h3 class="text-white text-center">If you have any questions about the requirements, you can email me at csavage@greenriver.edu</h3>
+        </div>
+    </div>
+</div>
+<script>
+
+    var collapse = document.getElementsByClassName("collapsible");
+    for (var i = 0; i < collapse.length; i++) {
+        collapse[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block")
+            {
+                content.style.display = "none";
+            } else
+            {
+                content.style.display = "block";
+            }
+        });
+    }
+</script>
+
+<script src="/sprint2/dark_mode.js"></script>
+</body>
+</html>
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset ="utf-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1">-->
+<!--    <title>Chipmunks</title>-->
+
+<!--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">-->
+<!--    <link rel="stylesheet" href="/sprint2/style.css">-->
+
+<!--    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>-->
+<!--    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>-->
+<!--    <style>-->
+
+
+<!--        span.first  {-->
+<!--            display: inline-block;-->
+<!--            float: left;-->
+<!--            padding: 5%;-->
+<!--            width: 40%;-->
+<!--            border: 5px solid black;-->
+<!--        }-->
+<!--        span.second  {-->
+<!--            display: inline-block;-->
+<!--            float: left;-->
+<!--            text-align: center;-->
+<!--            padding: 5%;-->
+
+<!--        }-->
+<!--        span.third  {-->
+<!--            display: inline-block;-->
+<!--            float: left;-->
+<!--            padding: 5%;-->
+<!--            width: 40%;-->
+<!--            border: 5px solid black;-->
+<!--        }-->
+
+<!--        .collapsible {-->
+<!--            background-color: #6AB445;-->
+<!--            color: white;-->
+<!--            padding: 20px;-->
+<!--            width: 100%;-->
+<!--            text-align: left;-->
+<!--            font-size: 15px;-->
+<!--        }-->
+
+<!--        .content {-->
+<!--            padding: 20px;-->
+<!--            display: none;-->
+<!--            overflow: hidden;-->
+<!--            background-color: #f1f1f1;-->
+<!--        }-->
+
+<!--    </style>-->
+<!--</head>-->
+<!--<body data-bs-theme="dark">-->
+<!--<nav class="navbar navbar-expand-lg navbar-light bg-light">-->
+<!--    <a class="navbar-brand" href="/index.html">Chippy Monks</a>-->
+<!--    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">-->
+<!--        <span class="navbar-toggler-icon"></span>-->
+<!--    </button>-->
+<!--    <div class="collapse navbar-collapse" id="navbarNav">-->
+<!--        <ul class="navbar-nav">-->
+<!--            <li class="nav-item dropdown">-->
+<!--                <a class="nav-link dropdown-toggle" href="#" id="sprintsDropdown" role="button" data-toggle="dropdown">-->
+<!--                    Sprint 1-->
+<!--                </a>-->
+<!--                <div class="dropdown-menu">-->
+<!--                    <a class="dropdown-item" href="/sprint1/index.html">Requirements</a>-->
+<!--                    <a class="dropdown-item" href="/sprint1/questionnaire.html">Questionnaire</a>-->
+<!--                    <a class="dropdown-item" href="/sprint1/contacts.html">Contact Us</a>-->
+<!--                </div>-->
+<!--            </li>-->
+<!--            <li class="nav-item dropdown">-->
+<!--                <a class="nav-link dropdown-toggle sprintsDropdown" href="#" role="button" data-toggle="dropdown">-->
+<!--                    Sprint 2-->
+<!--                </a>-->
+<!--                <div class="dropdown-menu">-->
+<!--                    <a class="dropdown-item" href="/sprint2/index.html">Requirements</a>-->
+<!--                    <a class="dropdown-item" href="/sprint2/questionnaire.html">Questionnaire</a>-->
+<!--                    <a class="dropdown-item" href="/sprint2/contacts.html">Contact Us</a>-->
+<!--                </div>-->
+<!--            </li>-->
+<!--            <li class="nav-item">-->
+<!--                <a class="nav-link" href="#">Sprint 3</a>-->
+<!--            </li>-->
+<!--            <li class="nav-item">-->
+<!--                <a class="nav-link" href="#">Sprint 4</a>-->
+<!--            </li>-->
+<!--            <li class="nav-item">-->
+<!--                <a class="nav-link" href="#">Sprint 5</a>-->
+<!--            </li>-->
+<!--        </ul>-->
+<!--    </div>-->
+<!--    <button onclick = "darkMode()" id="dark-mode-toggle" class="btn btn-dark"> Dark </button>-->
+<!--</nav>-->
+
+
+<!--&lt;!&ndash;collapsible&ndash;&gt;-->
+<!--    <div class="row mt-4 ml-3"><h1>Green River College Nursing Program Clinical Requirements</h1></div>-->
+<!--    <div class="row mt-4 ml-3 h5"><p>2660*All vaccination proof must include full name, date of birth, and date of vaccine, titer (blood draw), or test</p></div>-->
+
+<!--<button type="button" class="collapsible"><h4>Tuberculosis Test -Expires Yearly</h4></button>-->
+<!--<div class="content">-->
+<!--    <ul>-->
+<!--        <span class="first">-->
+<!--            <h3>2-step PPD</h3>-->
+<!--            <li>Must be two separate 2-step PPD tests done initially done approximately 2 weeks apart</li>-->
+<!--            <li>Document must show induration in millimeter, date placed, and date read</li>-->
+<!--        </span>-->
+<!--        <span class="second">-->
+<!--            <h1>OR</h1>-->
+<!--        </span>-->
+<!--        <span class="third">-->
+<!--            <h3>QuantiFERON</h3>-->
+<!--            <li>Results must be negative</li>-->
+<!--        </span>-->
+<!--    </ul>-->
+<!--</div>-->
+
+<!--<button type="button" class="collapsible"><h4>Hepatitis B Titer</h4></button>-->
+<!--<div class="content">-->
+<!--    <ul>-->
+<!--        <span class="first">-->
+<!--            <h3>Titer</h3>-->
+<!--            <li>Only Anti-HBs or HepB SaB test are accepted</li>-->
+<!--        </span>-->
+<!--        <span class="second">-->
+<!--            <h1>OR</h1>-->
+<!--        </span>-->
+<!--        <span class="third">-->
+<!--            <h3>Declination Form</h3>-->
+<!--            <li>If currently in process of vaccine series or titer, or if non-converter</li>-->
+<!--        </span>-->
+<!--    </ul>-->
+<!--</div>-->
+
+<!--<button type="button" class="collapsible"><h4>MMR Vaccine or Titer</h4></button>-->
+<!--<div class="content">-->
+<!--    <ul>-->
+<!--        <span class="first">-->
+<!--            <h3>2 documented vaccine dates</h3>-->
+<!--        </span>-->
+<!--        <span class="second">-->
+<!--            <h1>OR</h1>-->
+<!--        </span>-->
+<!--        <span class="third">-->
+<!--            <h3>Titer</h3>-->
+<!--            <li>Separate titer needed for Measles, Mumps, and Rubella</li>-->
+<!--            <li>If result is negative/low/equivocal must get booster dose</li>-->
+<!--        </span>-->
+<!--    </ul>-->
+<!--</div>-->
+
+<!--<button type="button" class="collapsible"><h4>Varicella Vaccine or Titer -History of Chickenpox not accepted</h4></button>-->
+<!--<div class="content">-->
+<!--    <ul>-->
+<!--        <span class="first">-->
+<!--            <h3>2 documented vaccine dates</h3>-->
+<!--        </span>-->
+<!--        <span class="second">-->
+<!--            <h1>OR</h1>-->
+<!--        </span>-->
+<!--        <span class="third">-->
+<!--            <h3>Titer</h3>-->
+<!--            <li>If result is negative/low/equivocal must get booster dose</li>-->
+<!--        </span>-->
+<!--    </ul>-->
+<!--</div>-->
+
+<!--<button type="button" class="collapsible"><h4>Tdap Vaccine</h4></button>-->
+<!--<div class="content">-->
+<!--    <ul>-->
+<!--        <span class="first">-->
+<!--            <li>Vaccine must be for current season (Sept thru August)</li>-->
+<!--        </span>-->
+<!--    </ul>-->
+<!--</div>-->
+
+<!--<button type="button" class="collapsible"><h4>Covid 19 Vaccine Series</h4></button>-->
+<!--<div class="content">-->
+<!--    <ul>-->
+<!--        <span class="first">-->
+<!--            <li>Proof must include manufacturer</li>-->
+<!--            <li>Pfizer, Moderna, and Janssen are the only ones we accept currently</li>-->
+<!--        </span>-->
+<!--    </ul>-->
+<!--</div>-->
+
+
+<!--<button type="button" class="collapsible"><h4>Covid Booster</h4></button>-->
+<!--<div class="content">-->
+<!--    <ul>-->
+<!--        <span class="first">-->
+<!--            <li>Proof must include manufacturer</li>-->
+<!--            <li>Only one dose required currently, but may change in the future</li>-->
+<!--        </span>-->
+<!--    </ul>-->
+<!--</div>-->
+
+<!--<br>-->
+
+
+<!--<button type="button" class="collapsible"><h4>CPR Card</h4></button>-->
+<!--<div class="content">-->
+<!--    <ul>-->
+<!--        <span class="first">-->
+<!--            <li>Must be American Heart Association Basic Life Support</li>-->
+<!--        </span>-->
+<!--    </ul>-->
+<!--</div>-->
+
+<!--<button type="button" class="collapsible"><h4>Professional Liability</h4></button>-->
+<!--<div class="content">-->
+<!--    <ul>-->
+<!--        <span class="first">-->
+<!--            <li>CANNOT attend lab or clinical prior to purchasing</li>-->
+<!--            <li>Expires end of each school year (08/31)</li>-->
+<!--            <li>Purchase at Cashier’s Office 253-833-9111 ext. 3399</li>-->
+<!--        </span>-->
+<!--    </ul>-->
+<!--</div>-->
+
+<!--<h3>- If you have any questions about the requirements, you can email me at csavage@greenriver.edu </h3>-->
+
+<!--<script>-->
+
+<!--    var collapse = document.getElementsByClassName("collapsible");-->
+<!--    for (var i = 0; i < collapse.length; i++) {-->
+<!--        collapse[i].addEventListener("click", function() {-->
+<!--            this.classList.toggle("active");-->
+<!--            var content = this.nextElementSibling;-->
+<!--            if (content.style.display === "block")-->
+<!--            {-->
+<!--                content.style.display = "none";-->
+<!--            } else-->
+<!--            {-->
+<!--                content.style.display = "block";-->
+<!--            }-->
+<!--        });-->
+<!--    }-->
+<!--</script>-->
+
+<!--<script src="/sprint2/dark_mode.js"></script>-->
+<!--</body>-->
+<!--</html>-->

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/sprint3/test/new-style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <style>
+        body{
+   
+          background: linear-gradient(to bottom right, #86f051,#0c552a);
+          color: black;
+        }
+        body.dark{
+          background: linear-gradient(to bottom right, #106333 ,#051a0e);
+          color: white;
+        }
+        .dark div #box{
+          background: #333;
+        }
+        div #box{
+          background: white;
+        }
+        
+        .box-area{
+            width: 930px;
+        }
+        .right-box{
+            padding: 40px 30px 40px 40px;
+        }
+
+        ::placeholder{
+            font-size: 16px;
+        }
+        .rounded-4{
+            border-radius: 20px;
+        }
+        .rounded-5{
+            border-radius: 30px;
+        }
+        .left-box img{
+          width: 250px;
+        }
+        /*------------ For small screens------------*/
+        @media only screen and (max-width: 768px){
+             .box-area{
+                margin: 30px 10px;
+            
+             }
+             .left-box {
+                height: 300px;
+               font-size: 15px;
+                overflow: hidden;
+                text-align: center;
+               margin: 0px;
+             }
+          .left-box img{
+            width: 150px;
+          }     
+        
+             .right-box{
+                padding: 20px;
+             }
+        }
+    </style>
+    <title>Contact Us</title>
+    <link rel="icon" href="/images/Nursing.ico" type="image/x-con">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <a class="navbar-brand" href="http://chipmunks.greenriverdev.com/">
+        <img src="/images/Nursing.png" class="nav-item" style="margin-left: 12px" width=50px height=50px>
+    </a>
+    <a class="navbar-brand" href="/index.html"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link mx-5" href="/sprint3/requirements.php" role="button">Requirements</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link mx-5" href="/sprint3/questionnaire.html" role="button">Questionnaire</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link mx-5" href="/sprint3/contacts.html" role="button">Contact Us</a>
+            </li>
+        </ul>
+    </div>
+     <button class="theme-toggle-button btn btn-dark m-3">Dark</button>
+</nav>
+ 
+     <div class="container d-flex justify-content-center align-items-center min-vh-100">
+       <div id="box" class="row border rounded-5 p-3 shadow box-area">
+       <div class="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column left-box" >
+           <div class="featured-image mb-lg-3">
+            <img src="/images/Nursing.png" class="img-fluid">
+           </div>
+         <div class="header-text mb-lg-4">
+              <h2>Contact Us</h2>
+              <p>Need to get in touch? Fill out the contact form with your inquiry.</p>
+              <p><span style="color: red">*</span> Indicates a required field.</p>
+         </div>
+       </div> 
+
+       <div class="col-md-6 right-box">
+           <div class="row align-items-center">
+          <form method="post" action="https://chipmunks.greenriverdev.com/sprint3/php/email.php" id="contact-form">
+               
+            <div class="form-group">
+              <label for="name">Name: <span style="color: red">*</span></label>
+              <div class="input-group mb-3">
+                  <input type="text" class="form-control form-control-lg bg-light fs-6" id="name" name="name" placeholder="Enter your name here" required>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="name">Email: <span style="color: red">*</span></label>
+              <div class="input-group mb-3">
+                  <input type="email" class="form-control form-control-lg bg-light fs-6" id="email" name="email" placeholder="email@example.com">
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="phone">Phone Number: </label>
+              <div class="input-group mb-3">
+                <input type="tel" class="form-control form-control-lg bg-light fs-6" id="phone" name="phone" maxlength="12" placeholder="xxx-xxx-xxxx">
+              </div>
+            </div> 
+              
+            <div class="form-group">
+              <label for="message">Message: </label><span style="color: red">*</span>
+              <div class="input-group mb-3">
+                <textarea class="form-control form-control-lg bg-light fs-6" id="message" name="message" rows="4" placeholder="Enter your message here" required></textarea>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <div class="input-group mb-3">
+                    <input type="submit" value="Submit">
+                </div>
+            </div>
+                
+          
+          </form>
+          </div>
+       </div> 
+      </div>
+    </div>
+  <script>
+    var tele = document.querySelector('#phone');
+
+    tele.addEventListener('keyup', function(e){
+      if (e.key != 'Backspace' && (tele.value.length === 3 || tele.value.length === 7)){
+      tele.value += '-';
+      }
+    });
+    
+    document.querySelector('.theme-toggle-button').addEventListener('click', (element) =>{
+      document.body.classList.toggle('dark');
+      if (element.target.innerHTML === "Light") {
+          element.target.innerHTML = "Dark";
+      } else {
+          element.target.innerHTML = "Light";
+      }
+    });
+</script>
+</body>
+</html>

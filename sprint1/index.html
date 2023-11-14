@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset ="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Chipmunks</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/sprint1/style.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
+    <style>
+
+
+        span.first  {
+            display: inline-block;
+            float: left;
+            padding: 5%;
+            width: 40%;
+            border: 5px solid black;
+        }
+        span.second  {
+            display: inline-block;
+            float: left;
+            text-align: center;
+            padding: 5%;
+
+        }
+        span.third  {
+            display: inline-block;
+            float: left;
+            padding: 5%;
+            width: 40%;
+            border: 5px solid black;
+        }
+
+        .collapsible {
+            background-color: #6AB445;
+            color: white;
+            padding: 20px;
+            width: 100%;
+            text-align: left;
+            font-size: 15px;
+        }
+
+        .content {
+            padding: 20px;
+            display: none;
+            overflow: hidden;
+            background-color: #f1f1f1;
+        }
+
+    </style>
+</head>
+<body data-bs-theme="dark">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/index.html">Chippy Monks</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="sprintsDropdown" role="button" data-toggle="dropdown">
+                    Sprint 1
+                </a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="/sprint1/index.html">Requirements</a>
+                    <a class="dropdown-item" href="/sprint1/questionnaire.html">Questionnaire</a>
+                    <a class="dropdown-item" href="/sprint1/contacts.html">Contact Us</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle sprintsDropdown" href="#" role="button" data-toggle="dropdown">
+                    Sprint 2
+                </a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="/sprint2/index.html">Requirements</a>
+                    <a class="dropdown-item" href="/sprint2/questionnaire.html">Questionnaire</a>
+                    <a class="dropdown-item" href="/sprint2/contacts.html">Contact Us</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Sprint 3</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Sprint 4</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Sprint 5</a>
+            </li>
+        </ul>
+    </div>
+    <button onclick = "darkMode()" id="dark-mode-toggle" class="btn btn-dark"> Dark </button>
+</nav>
+
+
+<!--collapsible-->
+    <div class="row mt-4 ml-3"><h1>Green River College Nursing Program Clinical Requirements</h1></div>
+    <div class="row mt-4 ml-3 h5"><p>2660*All vaccination proof must include full name, date of birth, and date of vaccine, titer (blood draw), or test</p></div>
+
+<button type="button" class="collapsible"><h4>Tuberculosis Test -Expires Yearly</h4></button>
+<div class="content">
+    <ul>
+        <span class="first">
+            <h3>2-step PPD</h3>
+            <li>Must be two separate 2-step PPD tests done initially done approximately 2 weeks apart</li>
+            <li>Document must show induration in millimeter, date placed, and date read</li>
+        </span>
+        <span class="second">
+            <h1>OR</h1>
+        </span>
+        <span class="third">
+            <h3>QuantiFERON</h3>
+            <li>Results must be negative</li>
+        </span>
+    </ul>
+</div>
+
+<button type="button" class="collapsible"><h4>Hepatitis B Titer</h4></button>
+<div class="content">
+    <ul>
+        <span class="first">
+            <h3>Titer</h3>
+            <li>Only Anti-HBs or HepB SaB test are accepted</li>
+        </span>
+        <span class="second">
+            <h1>OR</h1>
+        </span>
+        <span class="third">
+            <h3>Declination Form</h3>
+            <li>If currently in process of vaccine series or titer, or if non-converter</li>
+        </span>
+    </ul>
+</div>
+
+<button type="button" class="collapsible"><h4>MMR Vaccine or Titer</h4></button>
+<div class="content">
+    <ul>
+        <span class="first">
+            <h3>2 documented vaccine dates</h3>
+        </span>
+        <span class="second">
+            <h1>OR</h1>
+        </span>
+        <span class="third">
+            <h3>Titer</h3>
+            <li>Separate titer needed for Measles, Mumps, and Rubella</li>
+            <li>If result is negative/low/equivocal must get booster dose</li>
+        </span>
+    </ul>
+</div>
+
+<button type="button" class="collapsible"><h4>Varicella Vaccine or Titer -History of Chickenpox not accepted</h4></button>
+<div class="content">
+    <ul>
+        <span class="first">
+            <h3>2 documented vaccine dates</h3>
+        </span>
+        <span class="second">
+            <h1>OR</h1>
+        </span>
+        <span class="third">
+            <h3>Titer</h3>
+            <li>If result is negative/low/equivocal must get booster dose</li>
+        </span>
+    </ul>
+</div>
+
+<button type="button" class="collapsible"><h4>Tdap Vaccine</h4></button>
+<div class="content">
+    <ul>
+        <span class="first">
+            <li>Vaccine must be for current season (Sept thru August)</li>
+        </span>
+    </ul>
+</div>
+
+<button type="button" class="collapsible"><h4>Covid 19 Vaccine Series</h4></button>
+<div class="content">
+    <ul>
+        <span class="first">
+            <li>Proof must include manufacturer</li>
+            <li>Pfizer, Moderna, and Janssen are the only ones we accept currently</li>
+        </span>
+    </ul>
+</div>
+
+
+<button type="button" class="collapsible"><h4>Covid Booster</h4></button>
+<div class="content">
+    <ul>
+        <span class="first">
+            <li>Proof must include manufacturer</li>
+            <li>Only one dose required currently, but may change in the future</li>
+        </span>
+    </ul>
+</div>
+
+<br>
+
+
+<button type="button" class="collapsible"><h4>CPR Card</h4></button>
+<div class="content">
+    <ul>
+        <span class="first">
+            <li>Must be American Heart Association Basic Life Support</li>
+        </span>
+    </ul>
+</div>
+
+<button type="button" class="collapsible"><h4>Professional Liability</h4></button>
+<div class="content">
+    <ul>
+        <span class="first">
+            <li>CANNOT attend lab or clinical prior to purchasing</li>
+            <li>Expires end of each school year (08/31)</li>
+            <li>Purchase at Cashier’s Office 253-833-9111 ext. 3399</li>
+        </span>
+    </ul>
+</div>
+
+<h3>- If you have any questions about the requirements, you can email me at csavage@greenriver.edu </h3>
+
+<script>
+
+    var collapse = document.getElementsByClassName("collapsible");
+    for (var i = 0; i < collapse.length; i++) {
+        collapse[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block")
+            {
+                content.style.display = "none";
+            } else
+            {
+                content.style.display = "block";
+            }
+        });
+    }
+</script>
+
+<script src="/sprint1/dark_mode.js"></script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>pizza</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+
+</head>
+
+<!--body-->
+<body>
+
+  <h1>Order a Pizza</h1>
+
+
+  <!--container for form--> 
+  <div class="container-fluid mt-2"> 
+    <!-- https://schrock.greenriverdev.com/vardump.php -->
+    <!--name="myForm"--> 
+    <form method="post" action="https://chipmunks.greenriverdev.com/pizzaform/ordersummary.php" onsubmit="return onlyTwoCheckBoxes()">
+      <!--onsubmit="return onlyTwoCheckBoxes()"-->
+      <!--fields-->
+      <div class="form-group">
+        <label for="name">Name: </label>
+        <input type="text" id="name" name="name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone Number: </label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" required>
+      </div>
+      <!--format for pattern [numbers allow] {how many digits are required} "-" (to separate each set)-->
+
+
+      <div class="form-group">
+        <p>Size: </p>
+        <input type="radio" id="large" name="sizes" value="Large" required>
+        <label for="large">Large</label>
+        <input type="radio" id="medium" name="sizes" value="Medium" required>
+        <label for="medium">Medium</label>
+        <input type="radio" id="small" name="sizes" value="Small" required>
+        <label for="small">Small</label>
+      </div>
+
+
+      <div class="form-group">
+        <p>Toppings: </p>
+        <input type="checkbox" name="toppings[]" value="Pepperoni" id="option 1"> Pepperoni<br>
+        <input type="checkbox" name="toppings[]" value="Mushrooms" id="option 2"> Mushrooms<br>
+        <input type="checkbox" name="toppings[]" value="Extra Cheese" id="option 3"> Extra Cheese<br>
+        <input type="checkbox" name="toppings[]" value="Spinach" id="option 4"> Spinach<br>
+        <input type="checkbox" name="toppings[]" value="Pineapple" id="option 5"> Pineapple<br>
+        <input type="checkbox" name="toppings[]" value="Bacon" id="option 6"> Bacon<br>
+      </div>
+      <!--
+      - list of toppings
+      - creating a dropdown for toppings
+      - only limit to 2 options
+      - bacon, pepperoni, spinach, extra cheese, tomatoes
+
+      - call method/onsubmit, validating options by requiring
+      2 selections and making sure that each one is coming out as
+      the value/field, alert(), 
+      -->
+
+      <div class="form-group">
+        <label for="comments">Comments: </label>
+        <input type="text" id="comments" name="comments">
+      </div>
+
+      <div class="form-group">
+       
+      </div>
+      <input type="submit">
+      <!--onclick="return validateForm()"
+       value="submit"-->
+    </form>
+  </div>
+  <!--end of container-->
+
+</body>
+<!--end of body-->
+
+</html>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="7ec570bd-0435-4867-b842-0cede04a5934" name="Chipmunks" url="http://chipmunks.greenriverdev.com">
+        <fileTransfer rootFolder="/home/chipmunk/public_html" accessType="SFTP" host="chipmunks.greenriverdev.com" port="18765" sshConfigId="9adb4fd0-3f42-4cd8-85ae-2e6a0d37dfef" sshConfig="chipmunk@chipmunks.greenriverdev.com:18765 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

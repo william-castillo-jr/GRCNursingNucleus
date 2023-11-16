@@ -1,0 +1,49 @@
+nav{
+    background-color: #6AB445;
+}
+body{
+
+    background: linear-gradient(to bottom right, #86f051,#0c552a);
+    color: black;
+}
+body.dark{
+    background: linear-gradient(to bottom right, #106333 ,#051a0e);
+    color: white;
+}
+
+.container{
+    background-color: white;
+}
+table{
+    background:white;
+}
+.dark div #box{
+    background-color: #333;
+}
+
+.dark .container{
+    background-color:#333;
+}
+
+div #box{
+    background: white;
+}
+
+.checked {
+    color: orange;
+}
+.rating {
+    unicode-bidi: bidi-override;
+    direction: rtl;
+}
+.rating > span {
+    display: inline-block;
+    position: relative;
+    width: 1.1em;
+}
+.rating > span:hover:before,
+.rating > span:hover ~ span:before {
+    content: "\2605";
+    position: absolute;
+}
+

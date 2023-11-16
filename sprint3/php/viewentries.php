@@ -3,48 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Questionnaire</title>
+    <title>View Entries</title>
     <link rel="icon" href="/images/Nursing.ico" type="image/x-con">
     
 
-    <link rel="stylesheet" href="/sprint3/style.css">
-    <script src="/sprint3/dark_mode.js"></script>
+    <!--<link rel="stylesheet" href="/sprint3/style.css">-->
+    <!--<script src="/sprint3/dark_mode.js"></script>-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>]
+    <style>
+        body{
+            background-color: white;
+            color: black;
+        }
+        body .dark{
+            background-color: #333;
+            color: white;
+        }
+    </style>
 
 </head>
-<body data-bs-theme="light">
+<body>
 
 <!--navigation bar-->
 <nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <a class="navbar-brand" href="http://chipmunks.greenriverdev.com/">
+        <img src="/images/Nursing.png" class="nav-item" style="margin-left: 12px" width=50px height=50px>
+    </a>
     <a class="navbar-brand" href="/index.html"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
         <ul class="navbar-nav">
-            <a href="http://chipmunks.greenriverdev.com/"><img src="/images/Nursing.png" class="nav-item mx-4 justify-content-left" width=50px height=50px></a>
-            <li>
+            <li class="nav-item">
                 <a class="nav-link mx-5" href="/sprint3/requirements.php" role="button">Requirements</a>
             </li>
-            <li>
-                <a class="nav-link mx-5" href="/sprint3/questionnaire.html" role="button">Questionnaire</a>
+            <li class="nav-item">
+                <a class="nav-link mx-5" href="/sprint3/questionnaire.php" role="button">Questionnaire</a>
             </li>
-            <li>
+            <li class="nav-item">
                 <a class="nav-link mx-5" href="/sprint3/contacts.html" role="button">Contact Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link mx-5" href="https://greenriveredu-my.sharepoint.com/:p:/r/personal/nelson_lillian_student_greenriver_edu/Documents/Sprint%203.pptx?d=wc60fb5d3d70543fb8fcb789f1e136428&csf=1&web=1&e=EuHkWb" role="button">Slideshow</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link mx-5" href="http://chipmunks.greenriverdev.com/sprint3/php/viewentries.php" role="button">ViewEntries</a>
             </li>
         </ul>
     </div>
-    <button onclick = "darkMode()" id="dark-mode-toggle" class="btn btn-dark"> Dark </button>
+    <button class="theme-toggle-button btn btn-dark m-3">Dark</button>
 </nav>
 
 <!--page content-->
-<div class="container container-bg">
+<div class="container">
    <h1>List of Entries</h1>
    <br>
    <div class="table-responsive">
-   <table class="table table-striped rounded" id="sortable-table">
+   <table class="table table-striped" id="sortable-table">
        <thead>
            <tr>
                <th onclick="sortTable(0, 'numeric')">Clinic Rating</th>
@@ -148,8 +166,6 @@
        </tbody>
    </table>
    </div>
-
-
 </div>
 
 <script>
@@ -198,7 +214,15 @@
                 }
             }
         }
+        document.querySelector('.theme-toggle-button').addEventListener('click', (element) =>{
+    document.body.classList.toggle('dark');
+      if (element.target.innerHTML === "Light") {
+          element.target.innerHTML = "Dark";
+      } else {
+          element.target.innerHTML = "Light";
+      }
+    });
 </script>
-<script src="/sprint3/dark_mode.js"></script>
+
 </body>
 </html>

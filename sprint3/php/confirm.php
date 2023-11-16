@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Questionnaire</title>
+    <title>Confirm</title>
     <link rel="icon" href="/images/Nursing.ico" type="image/x-con">
     
 
@@ -12,6 +12,10 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
     <style>
+    
+    body{
+        background: white;
+    }
         #review-input{
             margin: 30px 100px;
         }
@@ -29,33 +33,35 @@
 
     </style>
 </head>
-<body data-bs-theme="light">
+<body>
 
 <!--navigation bar-->
 <nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <a class="navbar-brand" href="http://chipmunks.greenriverdev.com/">
+        <img src="/images/Nursing.png" class="nav-item" style="margin-left: 12px" width=50px height=50px>
+    </a>
     <a class="navbar-brand" href="/index.html"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
         <ul class="navbar-nav">
-            <a href="http://chipmunks.greenriverdev.com/"><img src="/images/Nursing.png" class="nav-item mx-4 justify-content-left" width=50px height=50px></a>
-            <li>
-                <a class="nav-link mx-5" href="/sprint3/index.html" role="button">Requirements</a>
+            <li class="nav-item">
+                <a class="nav-link mx-5" href="/sprint3/requirements.php" role="button">Requirements</a>
             </li>
-            <li>
-                <a class="nav-link mx-5" href="/sprint3/questionnaire.html" role="button">Questionnaire</a>
+            <li class="nav-item">
+                <a class="nav-link mx-5" href="/sprint3/questionnaire.php" role="button">Questionnaire</a>
             </li>
-            <li>
+            <li class="nav-item">
                 <a class="nav-link mx-5" href="/sprint3/contacts.html" role="button">Contact Us</a>
             </li>
         </ul>
     </div>
-    <button onclick = "darkMode()" id="dark-mode-toggle" class="btn btn-dark"> Dark </button>
+    <button class="theme-toggle-button btn btn-dark m-3">Dark</button>
 </nav>
 
 <!--page content-->
-<div class="container container-bg">
+<div class="container">
     <?php
     $hasValue = true;
     $requiredFields = array(
@@ -163,6 +169,15 @@
 
 
 </div>
-<script src="/sprint3/dark_mode.js"></script>
+
+<!--//     document.querySelector('.theme-toggle-button').addEventListener('click', (element) =>{-->
+<!--//     document.body.classList.toggle('dark');-->
+<!--//       if (element.target.innerHTML === "Light") {-->
+<!--//           element.target.innerHTML = "Dark";-->
+<!--//       } else {-->
+<!--//           element.target.innerHTML = "Light";-->
+<!--//       }-->
+<!--//     });-->
+
 </body>
 </html>

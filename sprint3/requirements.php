@@ -7,27 +7,17 @@
     <link rel="icon" href="/images/Nursing.ico" type="image/x-con">
     <link rel="stylesheet" href="/sprint3/style.css">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
-    <style>
 
-        nav {
-            box-shadow: 0 3px 6px;
-        }
-        .arrow-icon {
-            margin-left: 10px;
-            transition: transform 0.2s;
-        }
-
-    </style>
 
 </head>
-<body data-bs-theme="light">
+<body class="dark" style="background: linear-gradient(to bottom right, #86f051,#0c552a);color: black;">
 <?php
 $username = 'chipmunk';
 $password = 'H13Wh9FEo-w5b[';
@@ -54,43 +44,45 @@ $result = @mysqli_query($cnxn, $sql);
                 <a class="nav-link mx-5" href="/sprint3/requirements.php" role="button">Requirements</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link mx-5" href="/sprint3/questionnaire.html" role="button">Questionnaire</a>
+                <a class="nav-link mx-5" href="/sprint3/questionnaire.php" role="button">Questionnaire</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link mx-5" href="/sprint3/contacts.html" role="button">Contact Us</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link mx-5" href="https://greenriveredu-my.sharepoint.com/:p:/r/personal/nelson_lillian_student_greenriver_edu/Documents/Sprint%203.pptx?d=wc60fb5d3d70543fb8fcb789f1e136428&csf=1&web=1&e=EuHkWb" role="button">Slideshow</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link mx-5" href="http://chipmunks.greenriverdev.com/sprint3/php/viewentries.php" role="button">ViewEntries</a>
+            </li>
         </ul>
     </div>
-    <button onclick = "darkMode()" id="dark-mode-toggle" class="btn btn-dark"> Dark </button>
+    <button class="theme-toggle-button btn btn-dark m-3">Dark</button>
 </nav>
 
-<div class="container p-3 mb-5 rounded" style="background-color: white; margin-top: 20px; box-shadow: 0 19px 38px;">
-    <div class="card border-dark mb-3" style="background-color: white;">
-        <div class="card-header border-dark">
-            <h1 class="text-center">Green River College Nursing Program Clinical Requirements</h1>
+<div class="container mb-5 rounded-5" style="width: 950px">
+    <div id="box" class="row border-3 rounded-5 p-5 m-3 shadow" style="background-color: white;">
+        <div class="text-center">
+            <h1>Green River College Nursing Program Clinical Requirements</h1>
             <br>
-            <h4 class="text-center">2660*All vaccination proof must include full name, date of birth, and date of vaccine, titer (blood draw), or test</h4>
+            <h4>2660*All vaccination proof must include full name, date of birth, and date of vaccine, titer (blood draw), or test</h4>
         </div>
         <?php
         $counter = 1;
         while ($row = mysqli_fetch_assoc($result)) {
             echo '<div class="container mt-5">';
-            echo '<div class="card border-dark">';
-            echo '<div class="card-header" data-bs-toggle="collapse" data-bs-target="#collapseExample' . $counter . '">';
+            echo '<div class="border p-2 rounded-5" data-bs-toggle="collapse" data-bs-target="#collapseExample' . $counter . '">';
+            echo '<div >';
             echo '<div class="d-flex justify-content-between align-items-center">';
             echo '<h5 class="text-center mb-0" style="flex: 1;">' . $row['title'] . '</h5>';
-            echo '<i class="fas fa-chevron-right arrow-icon"></i>';
+            echo '<i class="fas fa-chevron-right arrow-icon mx-4"></i>';
             echo '</div>';
             echo '</div>';
-            echo '<div class="row collapse" id="collapseExample' . $counter . '">';
-
-
+            echo '<div class="row collapse p-5" id="collapseExample' . $counter . '">';
 
 
             if (!empty($row['OptionOneTitle']) || !empty($row['OptionOnePointOne'])) {
-                echo '<div class="col-sm-6 mb-3 mb-sm-0">';
-                echo '<div class="card">';
-                echo '<div class="card-body p-2 g-col-6" style="padding: 50px 30px 50px 80px">';
+                echo '<div class="container p-2 col-lg-5">';
                 echo '<h5>' . $row['OptionOneTitle'] . '</h5>';
                 if (!empty($row['OptionOnePointOne'])) {
                     echo '<li class="card-text">' . $row['OptionOnePointOne'] . '</li>';
@@ -102,13 +94,14 @@ $result = @mysqli_query($cnxn, $sql);
                     echo '<li class="card-text">' . $row['OptionOnePointThree'] . '</li>';
                 }
                 echo '</div>';
-                echo '</div>';
+    
 
 
 
                 if (!empty($row['OptionTwoTitle']) || !empty($row['OptionTwoPointOne'])) {
-                    echo '<div class="card">';
-                    echo '<div class="card-body">';
+                    
+                    echo'<div class="container col-lg-2"><h2>OR</h2></div>';
+                    echo '<div class="container p-2 col-lg-5">';
                     echo '<h5 class="card-title">' . $row['OptionTwoTitle'] . '</h5>';
                     if (!empty($row['OptionTwoPointOne'])) {
                         echo '<li class="card-text">' . $row['OptionTwoPointOne'] . '</li>';
@@ -120,37 +113,30 @@ $result = @mysqli_query($cnxn, $sql);
                         echo '<li class="card-text">' . $row['OptionTwoPointThree'] . '</li>';
                     }
                     echo '</div>';
-                    echo '</div>';
                 }
                 echo '</div>';
             }
-            echo '</div>';
+          
             echo '</div>';
             echo '</div>';
             $counter++;
         }
         ?>
         <div>
-            <h3 class="text-center mt-3">If you have any questions about the requirements, you can email me at csavage@greenriver.edu</h3>
+            <h6 class="text-center mt-5">If you have any questions about the requirements, you can email me at csavage@greenriver.edu</h6>
         </div>
     </div>
 </div>
-
 <script>
-    var collapse = document.querySelectorAll(".card-header");
-    for (var i = 0; i < collapse.length; i++) {
-        collapse[i].addEventListener("click", function() {
-            this.classList.toggle("active");
-            var content = this.nextElementSibling;
-            if (content.style.display === "block") {
-                content.style.display = "none";
-            } else {
-                content.style.display = "block";
-            }
-        });
-    }
+    document.querySelector('.theme-toggle-button').addEventListener('click', (element) =>{
+    document.body.classList.toggle('dark');
+      if (element.target.innerHTML === "Light") {
+          element.target.innerHTML = "Dark";
+      } else {
+          element.target.innerHTML = "Light";
+      }
+    });
 </script>
 
-<script src="/sprint3/dark_mode.js"></script>
 </body>
 </html>

@@ -7,15 +7,61 @@
     <link rel="icon" href="/images/Nursing.ico" type="image/x-con">
     
 
+    <link rel="stylesheet" href="/sprint3/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/sprint2/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+    
+    body{
+        background: white;
+    }
+        #review-input{
+            margin: 30px 100px;
+        }
+        #text {
+            margin-top: 3em;
+        }
+        #button{
+            margin-top: 4em;
+            padding: 10px 30px ;
+            text-align: center;
+            font-size: 17px;
+        }
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
 
+
+    </style>
 </head>
+<body>
 
-<body data-bs-theme="light">
+<!--navigation bar-->
+<nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <a class="navbar-brand" href="http://chipmunks.greenriverdev.com/">
+        <img src="/images/Nursing.png" class="nav-item" style="margin-left: 12px" width=50px height=50px>
+    </a>
+    <a class="navbar-brand" href="/index.html"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link mx-5" href="/sprint3/requirements.php" role="button">Requirements</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link mx-5" href="/sprint3/questionnaire.php" role="button">Questionnaire</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link mx-5" href="/sprint3/contacts.html" role="button">Contact Us</a>
+            </li>
+        </ul>
+    </div>
+    <button class="theme-toggle-button btn btn-dark m-3">Dark</button>
+</nav>
+
+<!--page content-->
+<div class="container">
 
         <?php
             
@@ -53,26 +99,26 @@
 
             if ($_POST == null)
             {
-                echo "<span style=font-size:250%; padding: 10px;>Please fill out Experience form</span>";
+                echo "<span style=font-size:250%;'>Please fill out Experience form</span>";
                 exit();
             }
             if ($_POST !== null)
             {
                 if ($month == "January" ||$month == "February" || $month == "March")
                 {
-                    echo "<body style='background-color: $JanFebMar;'>";
+                    echo "<div class='container p-5 shadow-lg p-3 mb-5 rounded' style='background-color: $JanFebMar; height: 650px; text-align: center;'>";
                 }
                 if ($month == "April" || $month == "May" || $month == "June")
                 {
-                    echo "<body style='background-color: $AprMayJun;'>";
+                    echo "<div class='container p-5 shadow-lg p-3 mb-5 rounded' style='background-color: $AprMayJun; height: 650px; text-align: center;'>";
                 }
                 if ($month == "July" || $month == "September")
                 {
-                    echo "<body style='background-color: $JumSep;'>";
+                    echo "<div class='container p-5 shadow-lg p-3 mb-5 rounded' style='background-color: $JumSep;  height: 650px; text-align: center;'>";
                 }
                 if ($month == "October" || $month == "November" || $month == "December")
                 {
-                    echo "<body style='background-color: $OctToDec;'>";
+                    echo "<div class='container p-5 shadow-lg p-3 mb-5 rounded' style='background-color: $OctToDec; height: 650px; text-align: center;'>";
                 }
             }
 
@@ -83,9 +129,10 @@
             $last1 = $year[2];
             $last2 = $year[3];
 
-            echo '<span style="font-size:250%; padding: 10px;">'.$month." ".$year;
+            echo '<span style="font-size:250%;">'.$month." ".$year;
             echo "<br />".$first.$random.$last1.$last2;
             echo "<br />Screenshot this page as a receipt for your Instructor.</span>";
             ?>
+            </div>
     </body>
 </html>

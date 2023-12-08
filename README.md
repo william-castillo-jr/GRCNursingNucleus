@@ -1,4 +1,4 @@
-# Nursing-Clinical-Information-Portal-Website
+# Nursing Clinical Information Portal Website
 You may visit the website here: http://chipmunks.greenriverdev.com/sprint5/requirements.php
 
 ## Authors
